@@ -31,7 +31,18 @@ export default function Hero() {
         padding: '0 24px',
       }}
     >
-      <motion.div variants={container} initial="hidden" animate="show">
+      {/* readability scrim between particles and text */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          inset: '-10% -20%',
+          background:
+            'radial-gradient(ellipse 60% 55% at 50% 48%, rgba(5,6,10,0.82) 0%, rgba(5,6,10,0.55) 45%, rgba(5,6,10,0) 75%)',
+          pointerEvents: 'none',
+        }}
+      />
+      <motion.div variants={container} initial="hidden" animate="show" style={{ position: 'relative' }}>
         <motion.p
           variants={item}
           className="mono"
@@ -54,9 +65,16 @@ export default function Hero() {
             letterSpacing: '-0.03em',
           }}
         >
-          {profile.name.split(' ')[0].toUpperCase()}
+          <span style={{ textShadow: '0 2px 24px rgba(0,0,0,0.85), 0 0 60px rgba(0,0,0,0.6)' }}>
+            {profile.name.split(' ')[0].toUpperCase()}
+          </span>
           <br />
-          <span className="gradient-text">{profile.role.toUpperCase()}</span>
+          <span
+            className="gradient-text"
+            style={{ filter: 'drop-shadow(0 2px 18px rgba(0,0,0,0.9))' }}
+          >
+            {profile.role.toUpperCase()}
+          </span>
         </motion.h1>
 
         <motion.p
@@ -64,9 +82,11 @@ export default function Hero() {
           style={{
             maxWidth: 560,
             margin: '32px auto 0',
-            color: 'var(--muted)',
+            color: 'var(--text)',
+            opacity: 0.85,
             fontSize: 18,
             lineHeight: 1.7,
+            textShadow: '0 1px 12px rgba(0,0,0,0.9)',
           }}
         >
           {profile.tagline}

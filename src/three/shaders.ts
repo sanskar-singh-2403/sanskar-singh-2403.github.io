@@ -64,7 +64,7 @@ void main() {
   // twinkle
   float tw = 0.75 + 0.25 * sin(uTime * (1.0 + vRandom * 3.0) + vRandom * 40.0);
 
-  gl_FragColor = vec4(color * 1.6, alpha * tw);
+  gl_FragColor = vec4(color * 1.05, alpha * tw * 0.75);
 }
 `
 

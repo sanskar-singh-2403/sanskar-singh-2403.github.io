@@ -35,8 +35,8 @@ export default function Scene({
           <CoreArtifact scrollProgress={scrollProgress} />
           <EffectComposer multisampling={0}>
             <Bloom
-              intensity={0.9}
-              luminanceThreshold={0.18}
+              intensity={0.45}
+              luminanceThreshold={0.32}
               luminanceSmoothing={0.9}
               mipmapBlur
             />
