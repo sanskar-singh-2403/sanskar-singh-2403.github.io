@@ -31,7 +31,7 @@ export default function Nav() {
       }}
     >
       <a href="#" className="mono" style={{ fontSize: 15, letterSpacing: '0.15em' }}>
-        <span style={{ color: 'var(--cyan)' }}>&#9670;</span> SANSKAR<span style={{ color: 'var(--muted)' }}>.S</span>
+        <span style={{ color: 'var(--cyan)' }}>&#9670;</span> SANSKAR<span style={{ color: 'var(--muted)' }}>.SINGH</span>
       </a>
       <div style={{ display: 'flex', gap: 28, alignItems: 'center' }}>
         {links.map((l) => (
