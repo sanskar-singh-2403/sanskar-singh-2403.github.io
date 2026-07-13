@@ -1,10 +1,10 @@
 export const profile = {
-  name: 'Sanskar S',
+  name: 'Sanskar Singh',
   role: 'Software Engineer',
   tagline: 'I build data platforms, knowledge graphs, and systems from first principles.',
   location: 'Earth, Sol System',
-  github: 'https://github.com/sanskar',
-  linkedin: 'https://www.linkedin.com/',
+  github: 'https://github.com/sanskar-singh-2403',
+  linkedin: 'https://www.linkedin.com/in/sanskar-singh-bhardwaj-558771227/',
   email: 'sanskars@pretectum.com',
 }
 
@@ -24,14 +24,6 @@ export const projects = [
       'A book-length project reimplementing the internet stack layer by layer — sockets, DNS, HTTP, TLS — every line written by hand to understand what actually happens on the wire.',
     tech: ['Go', 'TCP/IP', 'DNS', 'HTTP', 'TLS'],
     accent: '#7b5cff',
-  },
-  {
-    title: 'Customer MDM Platform',
-    subtitle: 'Enterprise data at Pretectum',
-    description:
-      'Microservices powering customer master data management — schema-driven datasets, Salesforce and JDBC connectors, encrypted pipelines, and search infrastructure at scale.',
-    tech: ['Node.js', 'React', 'DynamoDB', 'AWS', 'OpenSearch'],
-    accent: '#b400ff',
   },
   {
     title: 'Copilot Knowledge Service',
