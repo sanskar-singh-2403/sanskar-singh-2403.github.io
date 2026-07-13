@@ -53,7 +53,7 @@ export default function Hero() {
             marginBottom: 24,
           }}
         >
-          [ INITIALIZING PORTFOLIO_v2.0 ]
+          [ A PERSON WHO THINKS ALL TEH TIME ]
         </motion.p>
 
         <motion.h1
