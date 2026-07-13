@@ -53,7 +53,7 @@ export default function Hero() {
             marginBottom: 24,
           }}
         >
-          [ A PERSON WHO THINKS ALL TEH TIME ]
+          [ A PERSON WHO THINKS ALL THE TIME ]
         </motion.p>
 
         <motion.h1
