@@ -5,9 +5,9 @@
   --magenta: #b400ff;
   --violet: #7b5cff;
   --text: #e8ecf4;
-  --muted: #8a93a8;
+  --muted: #a7b1c7;
   --border: rgba(255, 255, 255, 0.08);
-  --glass: rgba(255, 255, 255, 0.04);
+  --glass: rgba(10, 12, 20, 0.6);
   --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }

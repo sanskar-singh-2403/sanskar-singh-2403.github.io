@@ -1,10 +1,5 @@
 import { Reveal } from './Reveal'
-
-const stats = [
-  { value: '4+', label: 'Years shipping production systems' },
-  { value: '12+', label: 'Microservices maintained' },
-  { value: '∞', label: 'Curiosity for first principles' },
-]
+import { stats, achievements } from '../data'
 
 export default function About() {
   return (
@@ -26,15 +21,25 @@ export default function About() {
       >
         <Reveal delay={0.1}>
           <p style={{ color: 'var(--muted)', fontSize: 17, lineHeight: 1.85 }}>
-            I work on enterprise data platforms by day — customer master data,
-            schema-driven pipelines, search infrastructure — and rebuild the
-            internet from scratch by night. I believe the best engineers are
-            the ones who refuse to treat any layer of the stack as magic.
+            B.Tech at IIIT Naya Raipur, currently an SDE Intern at Hyperverge
+            building CodeLLM agents on Neo4j knowledge graphs. Across three
+            internships I've shipped identity-verification products, loan
+            origination platforms, and developer tooling — and I rebuild the
+            internet from scratch in Go on the side.
           </p>
           <p style={{ color: 'var(--muted)', fontSize: 17, lineHeight: 1.85, marginTop: 20 }}>
-            Currently deep in knowledge graphs, retrieval systems, and the
-            question of how to make AI actually understand structured data.
+            I believe the best engineers refuse to treat any layer of the
+            stack as magic. Currently deep in knowledge graphs, retrieval
+            systems, and making AI actually understand structured data.
           </p>
+          <div style={{ marginTop: 28, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {achievements.map((a) => (
+              <div key={a} style={{ display: 'flex', gap: 12, alignItems: 'baseline' }}>
+                <span className="mono" style={{ color: 'var(--cyan)', fontSize: 13 }}>▸</span>
+                <span style={{ color: 'var(--muted)', fontSize: 14.5, lineHeight: 1.6 }}>{a}</span>
+              </div>
+            ))}
+          </div>
         </Reveal>
 
         <Reveal delay={0.2}>
@@ -47,7 +52,7 @@ export default function About() {
               >
                 <span
                   className="gradient-text"
-                  style={{ fontSize: 36, fontWeight: 700, minWidth: 72 }}
+                  style={{ fontSize: 36, fontWeight: 700, minWidth: 92 }}
                 >
                   {s.value}
                 </span>

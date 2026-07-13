@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section" style={{ paddingBottom: 60 }}>
       <Reveal>
-        <p className="section-label">04 / Contact</p>
+        <p className="section-label">05 / Contact</p>
         <h2 className="section-title" style={{ marginBottom: 24 }}>
           Let's build something{' '}
           <span className="gradient-text">impossible</span>
@@ -60,6 +60,21 @@ export default function Contact() {
             }}
           >
             LINKEDIN
+          </a>
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noreferrer"
+            className="mono glass-card"
+            style={{
+              padding: '16px 32px',
+              fontSize: 14,
+              letterSpacing: '0.1em',
+              color: 'var(--magenta)',
+              borderRadius: 999,
+            }}
+          >
+            RESUME ↓
           </a>
         </div>
       </Reveal>

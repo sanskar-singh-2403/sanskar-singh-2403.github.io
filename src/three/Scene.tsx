@@ -48,6 +48,16 @@ export default function Scene({
           </EffectComposer>
         </Suspense>
       </Canvas>
+      {/* global dimmer so particles never overpower foreground text */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background:
+            'linear-gradient(180deg, rgba(5,6,10,0.30) 0%, rgba(5,6,10,0.42) 40%, rgba(5,6,10,0.5) 100%)',
+          pointerEvents: 'none',
+        }}
+      />
     </div>
   )
 }

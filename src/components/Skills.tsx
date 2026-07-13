@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section id="skills" className="section">
       <Reveal>
-        <p className="section-label">03 / Skills</p>
+        <p className="section-label">04 / Skills</p>
         <h2 className="section-title">
           The <span className="gradient-text">toolkit</span>
         </h2>

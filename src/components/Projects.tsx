@@ -70,7 +70,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section">
       <Reveal>
-        <p className="section-label">02 / Projects</p>
+        <p className="section-label">03 / Projects</p>
         <h2 className="section-title">
           Selected <span className="gradient-text">work</span>
         </h2>
@@ -85,36 +85,46 @@ export default function Projects() {
       >
         {projects.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.08}>
-            <TiltCard accent={p.accent}>
-              <p
-                className="mono"
-                style={{ fontSize: 12, letterSpacing: '0.2em', color: p.accent, marginBottom: 12 }}
-              >
-                {String(i + 1).padStart(2, '0')} — {p.subtitle.toUpperCase()}
-              </p>
-              <h3 style={{ fontSize: 28, fontWeight: 600, marginBottom: 14 }}>{p.title}</h3>
-              <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.75, flex: 1 }}>
-                {p.description}
-              </p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 24 }}>
-                {p.tech.map((t) => (
+            <a href={p.link} target="_blank" rel="noreferrer" style={{ display: 'block' }}>
+              <TiltCard accent={p.accent}>
+                <p
+                  className="mono"
+                  style={{ fontSize: 12, letterSpacing: '0.2em', color: p.accent, marginBottom: 12 }}
+                >
+                  {String(i + 1).padStart(2, '0')} — {p.subtitle.toUpperCase()}
+                </p>
+                <h3 style={{ fontSize: 28, fontWeight: 600, marginBottom: 14 }}>
+                  {p.title}
                   <span
-                    key={t}
                     className="mono"
-                    style={{
-                      fontSize: 11,
-                      padding: '5px 12px',
-                      borderRadius: 999,
-                      border: '1px solid var(--border)',
-                      color: 'var(--muted)',
-                      letterSpacing: '0.05em',
-                    }}
+                    style={{ fontSize: 13, color: 'var(--muted)', marginLeft: 10, letterSpacing: 0 }}
                   >
-                    {t}
+                    ↗
                   </span>
-                ))}
-              </div>
-            </TiltCard>
+                </h3>
+                <p style={{ color: 'var(--muted)', fontSize: 15, lineHeight: 1.75, flex: 1 }}>
+                  {p.description}
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 24 }}>
+                  {p.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="mono"
+                      style={{
+                        fontSize: 11,
+                        padding: '5px 12px',
+                        borderRadius: 999,
+                        border: '1px solid var(--border)',
+                        color: 'var(--muted)',
+                        letterSpacing: '0.05em',
+                      }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </TiltCard>
+            </a>
           </Reveal>
         ))}
       </div>

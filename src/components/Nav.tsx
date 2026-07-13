@@ -3,6 +3,7 @@ import { profile } from '../data'
 
 const links = [
   { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
@@ -45,6 +46,22 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
+        <a
+          href={profile.resume}
+          target="_blank"
+          rel="noreferrer"
+          className="mono"
+          style={{
+            fontSize: 12,
+            padding: '8px 18px',
+            border: '1px solid rgba(180,0,255,0.45)',
+            borderRadius: 999,
+            color: 'var(--magenta)',
+            letterSpacing: '0.1em',
+          }}
+        >
+          RESUME
+        </a>
         <a
           href={profile.github}
           target="_blank"
