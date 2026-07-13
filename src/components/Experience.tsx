@@ -13,7 +13,7 @@ export default function Experience() {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         {experience.map((e, i) => (
-          <Reveal key={e.company} delay={i * 0.08}>
+          <Reveal key={`${e.company}-${e.period}`} delay={i * 0.08}>
             <div className="glass-card" style={{ padding: '32px 36px' }}>
               <div
                 style={{

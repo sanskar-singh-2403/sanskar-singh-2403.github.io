@@ -1,8 +1,8 @@
 export const profile = {
   name: 'Sanskar Singh',
-  role: 'Software Engineer',
+  role: 'AI Engineer',
   tagline:
-    'SDE with 3 internships across AI tooling, fintech, and dev-infra. I build knowledge graphs, data platforms, and systems from first principles.',
+    'AI Engineer building agentic systems, knowledge graphs, and ML infrastructure. I like understanding every layer of the stack from first principles.',
   location: 'India',
   github: 'https://github.com/sanskar-singh-2403',
   linkedin: 'https://www.linkedin.com/in/sanskar-singh-bhardwaj-558771227/',
@@ -12,15 +12,39 @@ export const profile = {
 
 export const experience = [
   {
+    company: 'TailoredAI',
+    role: 'AI Engineer',
+    period: 'Oct 2025 — Present',
+    points: [
+      'Automating the hiring process at Cognizant with a multi-agent system: a proposal agent that surfaces available candidates for a role, an allocation agent that handles assignment, and an interview agent that conducts live interviews.',
+      'Built LLM-led voice interviews on OpenAI Realtime, with structured evaluation flowing back into the allocation pipeline.',
+      'Architected the platform around MCP and tool calling, keeping agents composable and every capability exposed as a typed, reusable tool.',
+    ],
+    tech: ['OpenAI Realtime', 'MCP', 'Tool Calling', 'Agents', 'TypeScript'],
+    accent: '#00f0ff',
+  },
+  {
+    company: 'Hyperverge',
+    role: 'Software Engineer',
+    period: 'Jun 2025 — Oct 2025',
+    points: [
+      'Owned the OCR service end-to-end — serving 1M+ documents monthly — including the vision-model layer for document understanding.',
+      'Built HyperTuring, a self-serve model training pipeline letting users bring their own data and train custom OCR and entity-classification models, cutting model onboarding from weeks to days.',
+      'Automated deployments with Ansible for configuration management: baked services into Amazon Machine Images, bootstrapped via user data, and rolled out through AWS Auto Scaling Groups — reducing deployment time by ~60%.',
+    ],
+    tech: ['OCR', 'Vision Models', 'Ansible', 'AMI', 'AWS ASG', 'Python'],
+    accent: '#ffb300',
+  },
+  {
     company: 'Hyperverge',
     role: 'SDE Intern',
-    period: 'Jan 2025 — Present',
+    period: 'Jan 2025 — Jun 2025',
     points: [
       'Built an intelligent CodeLLM agent: source code parsed to ASTs, modeled as a Neo4j knowledge graph, queried with Cypher for semantic code search, Q&A, automated test generation and code reviews.',
       'End-to-end ownership of the India-Verify product — verified identity data via DigiLocker from national databases (PAN, Aadhaar, Voter ID), delivering features and coordinating rolling production deployments.',
     ],
     tech: ['Neo4j', 'Cypher', 'RAG', 'MongoDB', 'AST'],
-    accent: '#00f0ff',
+    accent: '#00ffa3',
   },
   {
     company: 'Sauvant AI',
@@ -42,7 +66,7 @@ export const experience = [
       'Built an executor service parallelizing tasks across 8 backend instances with Java, Docker and Kubernetes — reduced test execution time by 40%.',
     ],
     tech: ['Java', 'LSP', 'JSON-RPC', 'Docker', 'Kubernetes'],
-    accent: '#00ffa3',
+    accent: '#ff4d8d',
   },
 ]
 
@@ -104,7 +128,7 @@ export const projects = [
 ]
 
 export const stats = [
-  { value: '3', label: 'SDE internships — AI tooling, fintech, dev-infra' },
+  { value: '5', label: 'Roles across AI agents, ML infra, fintech and dev-tooling' },
   { value: '2500+', label: 'DSA problems solved across LeetCode, Codeforces, CodeChef' },
   { value: '8.71', label: 'GPA — B.Tech ECE, IIIT Naya Raipur' },
 ]
@@ -117,19 +141,19 @@ export const achievements = [
 
 export const skillGroups = [
   {
+    label: 'AI & Agents',
+    items: ['OpenAI Realtime', 'MCP', 'Tool Calling', 'RAG', 'LangChain', 'Neo4j', 'Vision Models', 'OCR'],
+  },
+  {
     label: 'Languages',
-    items: ['TypeScript', 'JavaScript', 'Go', 'Java', 'C++', 'Python', 'Rust', 'SQL'],
+    items: ['TypeScript', 'Python', 'Go', 'Java', 'C++', 'Rust', 'SQL'],
   },
   {
     label: 'Backend & Data',
-    items: ['Node.js', 'Express', 'Neo4j', 'MongoDB', 'PostgreSQL', 'Redis', 'Kafka', 'GraphQL'],
+    items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Redis', 'Kafka', 'GraphQL'],
   },
   {
-    label: 'Frontend',
-    items: ['React', 'Next.js', 'Redux', 'Three.js', 'Tailwind', 'MUI'],
-  },
-  {
-    label: 'Cloud, Infra & AI',
-    items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'LangChain', 'RAG', 'MCP', 'TensorFlow'],
+    label: 'Cloud & Infra',
+    items: ['AWS', 'Ansible', 'AMI/ASG', 'Docker', 'Kubernetes', 'CI/CD'],
   },
 ]

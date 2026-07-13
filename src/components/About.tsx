@@ -21,11 +21,12 @@ export default function About() {
       >
         <Reveal delay={0.1}>
           <p style={{ color: 'var(--muted)', fontSize: 17, lineHeight: 1.85 }}>
-            B.Tech at IIIT Naya Raipur, currently an SDE Intern at Hyperverge
-            building CodeLLM agents on Neo4j knowledge graphs. Across three
-            internships I've shipped identity-verification products, loan
-            origination platforms, and developer tooling — and I rebuild the
-            internet from scratch in Go on the side.
+            AI Engineer at TailoredAI, building multi-agent systems that
+            automate hiring at Cognizant — LLM-led interviews over OpenAI
+            Realtime, allocation and proposal agents, all wired together with
+            MCP and tool calling. Before that at Hyperverge I owned the OCR
+            service, built HyperTuring (a self-serve model training pipeline),
+            and automated fleet deployments with Ansible, AMIs and AWS ASG.
           </p>
           <p style={{ color: 'var(--muted)', fontSize: 17, lineHeight: 1.85, marginTop: 20 }}>
             I believe the best engineers refuse to treat any layer of the
