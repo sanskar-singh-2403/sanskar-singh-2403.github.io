@@ -1,0 +1,177 @@
+%------------------------
+% Resume Template
+% Author : Anubhav Singh
+% Github : https://github.com/xprilion
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% Single-line heading for projects (title + links on one row, bullet aligns to title)
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Sanskar Singh Bhardwaj}} & Email: \href{mailto:sanskarsinghty1234@gmail.com}{sanskarsinghty1234@gmail.com}\\ & Mobile:~~~+91-7828652790 \\
+  \href{https://github.com/sanskar-singh-2403}{GitHub: sanskar-singh-2403} & LinkedIn: \href{https://www.linkedin.com/in/sanskar-singh-bhardwaj-558771227/}{Sanskar Singh Bhardwaj}\\
+  \href{https://sanskar-singh-2403.github.io/}{Portfolio: sanskar-singh-2403.github.io} & \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{~~Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {International Institute of Information Technology, Naya Raipur}{Raipur, India}
+      {Bachelor of Technology - Electronics \& Communication Engineering |  \textbf{GPA: 8.71/10}}{2021 - 2025}
+      {}
+    \resumeSubheading
+      {Delhi Public School}{Bhilai, India}
+      {Intermediate  |\textbf{ Percentage: 96\% }}{2019 - 2021}
+      {}
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+\resumeSubheading{TailoredAI}{Remote}
+    {AI Engineer}{Oct 2025 - Present}
+    \resumeItemListStart
+      \item{Automated a client's end-to-end hiring pipeline with an agent-driven workflow, cutting time-to-hire from 2 weeks to 3 days and saving ~15 recruiter hours per opening.}
+      \item{Built a real-time AI voice interview agent using OpenAI Whisper (STT) and TTS models, running 20+ automated interviews at sub-2s latency.}
+      \item{Built a candidate-sourcing engine that profiles and ranks 200+ applicants per opening by scoring past work, resumes, and project fit, cutting shortlisting from hours to minutes.}
+    \resumeItemListEnd
+\vspace{1pt}
+
+\resumeSubheading{Hyperverge}{Remote}
+    {SDE}{Jan 2025 - Oct 2025}
+    \resumeItemListStart
+      \item{Refactored the INDIA-OCR stack with async thread/process pool executors and in-memory OpenCV image handling, cutting ASG instances 20\% and lifting throughput from 2 to 5 RPS.}
+      \item{Optimized GPU inference on Triton (dynamic batching, multi-instance GPU execution, ensembles, model warmup), cutting the peak \texttt{g4dn.2xlarge} ASG from 40 to 10 instances (~75\% GPU cost reduction).}
+    \resumeItemListEnd
+\vspace{1pt}
+
+\resumeSubheading{TestRigor}{Remote}
+    {Full Stack Development Intern}{Nov 2023 - April 2024}
+    \resumeItemListStart
+      \item{Designed a custom Language Server Protocol (LSP) over JSON-RPC to power intelligent code suggestions in the team's IDE, cutting test authoring time by 20\%.}
+      \item{Built an executor service to parallelize test execution across 8 backend instances using Java, Docker, and Kubernetes, cutting test execution time by 40\%.}
+    \resumeItemListEnd
+\vspace{1pt}
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\vspace{-5pt}
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Cortex - GraphRAG AI Assistant} | \href{https://github.com/sanskar-singh-2403/cortex}{Github}}{}
+    \resumeItemListStart
+      \item{Built an AI assistant with an MCP backbone that ingests code and documents into a Neo4j knowledge graph, answering multi-hop natural-language queries with cited sources via Graph-RAG and Cypher-to-LLM translation.}
+      \item{Parses codebases into ASTs to power semantic code search, automated test generation, and documentation. \textit{Tech: TypeScript, Python, Neo4j, OpenAI, MCP, Zod.}}
+    \resumeItemListEnd
+\vspace{1pt}
+
+  \resumeProjectHeading
+    {\textbf{Events App} | \href{https://github.com/sanskar-singh-2403/events_app}{Github} | \href{https://evently-yy.vercel.app/}{Deployed Link}}{}
+    \resumeItemListStart
+      \item{A full-stack event management web app to create events and buy tickets, with Stripe integration, Clerk-based authentication, and tag-based search. \textit{Tech: Next.js, MongoDB, Tailwind, ShadCn, Clerk, Stripe.}}
+    \resumeItemListEnd
+\vspace{1pt}
+
+  \resumeProjectHeading
+    {\textbf{Text-Summarizer} | \href{https://github.com/sanskar-singh-2403/text_summarizer}{Github}}{}
+    \resumeItemListStart
+      \item{Built an abstractive text summarizer using Hugging Face's Pegasus model, served over a FastAPI backend for sequence-to-sequence summarization of long documents. \textit{Tech: Python, Hugging Face Transformers, FastAPI.}}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------------
+\section{Achievements and Awards}
+\resumeSubHeadingListStart
+  \item \small{\textbf{Flipkart Grid 5.0 Finalist} - Qualified for the finals, where a total of 1 lakh teams participated.}
+  \item \small{\textbf{Competitive Programming} - Ranked Specialist (1480+) on \textbf{\href{https://codeforces.com/profile/Gustavo_gus}{CodeForces}} and 4 Star (1800+) on \textbf{\href{https://www.codechef.com/users/king_ragnar24}{CodeChef}}.}
+  \item \small{Solved over 2500+ problems across \textbf{\href{https://leetcode.com/ken_kaneki12/}{LeetCode}}, \textbf{\href{https://auth.geeksforgeeks.org/user/sanskarsinghty1234}{GFG}}, CodeForces, and CodeChef.}
+  \item \small{\textbf{Kaggle Specialist} - Achieved a rank under 400 in the Kaggle RL competition \textbf{\href{https://www.kaggle.com/ghoulreaper}{ghoulreaper}}.}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Skills and Technologies}
+\vspace{2pt}
+{\small C++, Java, Python, JavaScript, TypeScript, Golang, Node.js, Express, React, Next.js, MongoDB, PostgreSQL, Neo4j, Docker, Kubernetes, AWS, Kafka, TensorFlow, OpenAI, LangChain.}
+\vspace{-5pt}
+
+\end{document}
