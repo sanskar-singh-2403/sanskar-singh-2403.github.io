@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import { profile } from '../data'
 
-const links = [
+const sectionLinks = [
   { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
@@ -10,6 +11,20 @@ const links = [
 ]
 
 export default function Nav() {
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const onHome = pathname === '/'
+
+  const goToSection = (hash: string) => {
+    if (onHome) {
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      // Navigate home, then scroll once the section exists.
+      navigate('/')
+      setTimeout(() => document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' }), 120)
+    }
+  }
+
   return (
     <motion.nav
       initial={{ y: -60, opacity: 0 }}
@@ -30,22 +45,44 @@ export default function Nav() {
         WebkitBackdropFilter: 'blur(8px)',
       }}
     >
-      <a href="#" className="mono" style={{ fontSize: 15, letterSpacing: '0.15em' }}>
+      <Link to="/" className="mono" style={{ fontSize: 15, letterSpacing: '0.15em' }}>
         <span style={{ color: 'var(--cyan)' }}>&#9670;</span> SANSKAR<span style={{ color: 'var(--muted)' }}>.SINGH</span>
-      </a>
+      </Link>
       <div style={{ display: 'flex', gap: 28, alignItems: 'center' }}>
-        {links.map((l) => (
-          <a
+        {sectionLinks.map((l) => (
+          <button
             key={l.href}
-            href={l.href}
+            onClick={() => goToSection(l.href)}
             className="mono nav-link"
-            style={{ fontSize: 13, color: 'var(--muted)', letterSpacing: '0.08em' }}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              fontSize: 13,
+              color: 'var(--muted)',
+              letterSpacing: '0.08em',
+            }}
             onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--cyan)')}
             onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--muted)')}
           >
             {l.label}
-          </a>
+          </button>
         ))}
+        <Link
+          to="/blog"
+          className="mono nav-link"
+          style={{
+            fontSize: 13,
+            color: pathname.startsWith('/blog') ? 'var(--cyan)' : 'var(--muted)',
+            letterSpacing: '0.08em',
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--cyan)')}
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.color = pathname.startsWith('/blog') ? 'var(--cyan)' : 'var(--muted)')
+          }
+        >
+          Blog
+        </Link>
         <a
           href={profile.resume}
           target="_blank"
